@@ -30,6 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "prebuild": "rimraf dist",
+    "build:umd": "rollup -c rollup.config.js",
     "build": "set NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "build:types": "tsc",
     "build-package": "yarn run build && yarn run build:types",
