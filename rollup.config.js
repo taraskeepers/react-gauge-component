@@ -22,7 +22,8 @@ export default {
     commonjs(),
     babel({
       babelHelpers: 'bundled',
-      extensions, // This tells Babel to process .js and .jsx files
+      extensions, // Process files with these extensions
+      include: ['src/**/*'], // Ensure Babel processes our source files
       exclude: 'node_modules/**'
     })
   ]
