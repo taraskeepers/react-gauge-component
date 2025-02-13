@@ -12,17 +12,17 @@ export default {
     name: 'MyGaugeApp',
     globals: {
       react: 'React',
-      'react-dom': 'ReactDOM',
-      'react-gauge-component': 'ReactGaugeComponent'
+      'react-dom': 'ReactDOM'
+      // removed: 'react-gauge-component': 'ReactGaugeComponent'
     }
   },
-  external: ['react', 'react-dom', 'react-gauge-component'],
+  external: ['react', 'react-dom'], // removed 'react-gauge-component'
   plugins: [
     resolve({ extensions }),
     babel({
       babelHelpers: 'bundled',
-      extensions,            // Process files with these extensions
-      include: ['src/**/*'], // Only transform files in src folder
+      extensions,
+      include: ['src/**/*'],
       exclude: 'node_modules/**'
     }),
     commonjs()
