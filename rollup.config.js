@@ -1,6 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
 
 const extensions = ['.js', '.jsx'];
 
@@ -19,12 +19,12 @@ export default {
   external: ['react', 'react-dom', 'react-gauge-component'],
   plugins: [
     resolve({ extensions }),
-    commonjs(),
     babel({
       babelHelpers: 'bundled',
-      extensions, // Process files with these extensions
-      include: ['src/**/*'], // Ensure Babel processes our source files
+      extensions,            // Process files with these extensions
+      include: ['src/**/*'], // Only transform files in src folder
       exclude: 'node_modules/**'
-    })
+    }),
+    commonjs()
   ]
 };
