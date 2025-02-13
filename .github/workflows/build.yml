@@ -18,7 +18,7 @@ jobs:
       - name: Build UMD Bundle
         run: npm run build:umd
       - name: Upload UMD Bundle Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: umd-bundle
           path: dist/bundle.umd.js
