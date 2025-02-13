@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GaugeComponent from 'react-gauge-component';
+import { GaugeComponent } from 'react-gauge-component';
 
 // Generate a random test value between 0 and 100
 const randomValue = Math.floor(Math.random() * 101);
